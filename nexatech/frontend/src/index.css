@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #00285e;
+  --color-brand-navy-dark: #001c44;
+  --color-brand-blue: #0055ff;
+  --color-brand-blue-hover: #0043cc;
+  --color-brand-yellow: #fed000;
+  --color-brand-yellow-hover: #e6bc00;
+  --color-brand-slate: #f8fafc;
+  --font-sans: 'Poppins', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #334155;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Mobile App input polish: 16px font-size prevents unwanted iOS auto-zoom */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Aayush Institute Style Card: Crisp white, high rounded corners, clean border, gentle shadow and dynamic hover lift */
+.aayush-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 40, 94, 0.05), 0 2px 4px -2px rgba(0, 40, 94, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.aayush-card:hover {
+  transform: translateY(-5px);
+  border-color: #93c5fd;
+  box-shadow: 0 20px 30px -10px rgba(0, 40, 94, 0.12), 0 10px 15px -5px rgba(0, 85, 255, 0.06);
+}
+
+/* Category Pastel Highlights */
+.tint-blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #f8faff 50%, #ffffff 100%);
+  border-color: #bfdbfe;
+}
+
+.tint-emerald {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f7fef9 50%, #ffffff 100%);
+  border-color: #bbf7d0;
+}
+
+.tint-purple {
+  background: linear-gradient(135deg, #faf5ff 0%, #fdfaff 50%, #ffffff 100%);
+  border-color: #e9d5ff;
+}
+
+.tint-yellow {
+  background: linear-gradient(135deg, #fefce8 0%, #fffef2 50%, #ffffff 100%);
+  border-color: #fef08a;
+}
+
+/* Floating WhatsApp button pulse */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Custom Accessibility Focus Visible */
+:focus-visible {
+  outline: 2px solid #0055ff;
+  outline-offset: 2px;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
